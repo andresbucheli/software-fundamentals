@@ -14,10 +14,9 @@ while contador <= numLa:
     dado2 = int(random.random() * 6) + 1
     print(" dado1:" + str(dado1))
     print("dado2:" + str(dado2))
-    resDados = dado1 + dado2
-    if resDados % 2 == 0:
+    if dado1 == dado2:
         lanPar = lanPar + 1
-    else:
+    if dado1 != dado2:
         lanImpar = lanImpar + 1
     contador = contador + 1
 print("lanzamientos finalizados")
