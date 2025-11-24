@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional_1"/>
+        <attribute name="authors" value="Andres"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-23 10:35:04 p.&#160;m."/>
+        <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTE5OzA2OjMxOjIwIHAuwqBtLjszMjY4"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTIzOzEwOjM1OjA0IHAuwqBtLjsyOzMzNzM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="Res" type="String" array="False" size=""/>
+            <assign variable="dado" expression="Random(6) + 1"/>
+            <output expression="&quot;Presione una letra para lanzar el dado &quot;" newline="True"/>
+            <input variable="A"/>
+            <if expression="Dado % 2 ==0">
+                <then>
+                    <assign variable="res" expression="&quot;Par&quot;"/>
+                    <output expression="&quot;Dado: &quot;&amp; dado" newline="True"/>
+                    <output expression="&quot;El dado es: &quot;&amp; res" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="res" expression="&quot;impar&quot;"/>
+                    <output expression="&quot;El dado es: &quot;&amp; dado" newline="True"/>
+                    <output expression="&quot;El dado es: &quot;&amp; res" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
