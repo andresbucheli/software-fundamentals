@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RETO2"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 08:27:36 a.&#160;m."/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMToyNToyMiBQTTsyNjQz"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMTozNTo0MyBQTTsxOzI3NTU="/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzA4OjI3OjM2IGEuwqBtLjsxOzMzNzE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numVe" type="Integer" array="False" size=""/>
+            <declare name="resDa" type="Integer" array="False" size=""/>
+            <declare name="sumTo" type="Integer" array="False" size=""/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <output expression="&quot;Cuantas veces deseas lanzar el dado?&quot;" newline="True"/>
+            <input variable="numVe"/>
+            <assign variable="sumTo" expression="0"/>
+            <for variable="i" start="1" end="numVe" direction="inc" step="1">
+                <assign variable="resDa" expression="Random(6) + 1"/>
+                <assign variable="sumTo" expression="sumTo + resDa"/>
+                <output expression="&quot;lanzamiento &quot; &amp; i &amp; &quot;: &quot; &amp; resDa" newline="True"/>
+            </for>
+            <output expression="&quot;Fin de los lanzamientos: La suma total final es: &quot; &amp; sumTo" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
