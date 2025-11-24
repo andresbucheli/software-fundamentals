@@ -4,11 +4,11 @@
         <attribute name="name" value="challengues_reto5"/>
         <attribute name="authors" value="Andres"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-11-24 02:14:37 p.&#160;m."/>
+        <attribute name="saved" value="2025-11-24 06:33:46 p.&#160;m."/>
         <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzExOjI2OjI0IGEuwqBtLjszMjUz"/>
         <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzExOjMwOjA1IGEuwqBtLjsyO05JS087REVTS1RPUC1KRDBQOU5NOzIwMjUtMTEtMjM7MTE6MjU6MjIgUE07Y2hhbGxlbmd1ZXNfcmV0bzMuZnByZzs4MzQ1"/>
         <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzExOjQ5OjQzIGEuwqBtLjs5O0FuZHJlcztERVNLVE9QLThJQjRNU1A7MjAyNS0xMS0yNDsxMDoxOTo1NCBhLsKgbS47Y2hhbGxlbmd1ZXNfcmV0bzQuZnByZzs4OTc5"/>
-        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzAyOjE0OjM3IHAuwqBtLjsxOzMzNzc="/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzA2OjMzOjQ2IHAuwqBtLjsyOzMzODM="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,7 +19,6 @@
             <declare name="lanPar" type="Integer" array="False" size=""/>
             <declare name="lanImpar" type="Integer" array="False" size=""/>
             <declare name="contador" type="Integer" array="False" size=""/>
-            <declare name="resDados" type="Integer" array="False" size=""/>
             <declare name="A" type="String" array="False" size=""/>
             <assign variable="lanImpar" expression="0"/>
             <assign variable="lanPar" expression="0"/>
@@ -34,14 +33,17 @@
                 <assign variable="dado2" expression="Random(6)+1"/>
                 <output expression="&quot; dado1:&quot; &amp; dado1" newline="True"/>
                 <output expression="&quot;dado2:&quot; &amp; dado2" newline="True"/>
-                <assign variable="resDados" expression="dado1 + dado2"/>
-                <if expression="resDados %2==0">
+                <if expression="dado1=dado2">
                     <then>
                         <assign variable="lanPar" expression="lanPar+1"/>
                     </then>
-                    <else>
+                    <else/>
+                </if>
+                <if expression="dado1!=dado2">
+                    <then>
                         <assign variable="lanImpar" expression="lanImpar+1"/>
-                    </else>
+                    </then>
+                    <else/>
                 </if>
                 <assign variable="contador" expression="contador+1"/>
             </while>
