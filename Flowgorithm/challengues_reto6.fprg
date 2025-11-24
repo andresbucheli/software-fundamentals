@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challengues_reto6"/>
+        <attribute name="authors" value="Andres"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 06:24:31 p.&#160;m."/>
+        <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzA0OjQ0OjQwIHAuwqBtLjszMjY4"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzA2OjI0OjMxIHAuwqBtLjsxOzMzNzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Dado1" type="Integer" array="False" size=""/>
+            <declare name="Dado2" type="Integer" array="False" size=""/>
+            <declare name="toLan" type="Integer" array="False" size=""/>
+            <declare name="sumDa" type="Integer" array="False" size=""/>
+            <declare name="numPar" type="Integer" array="False" size=""/>
+            <declare name="numImpar" type="Integer" array="False" size=""/>
+            <declare name="lanDa" type="String" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <assign variable="toLan" expression="0"/>
+            <assign variable="sumDa" expression="0"/>
+            <assign variable="numPar" expression="0"/>
+            <assign variable="numImpar" expression="0"/>
+            <assign variable="lanDa" expression="&quot;S&quot;"/>
+            <while expression="lanDa=&quot;S&quot; or lanDa=&quot;s&quot;">
+                <output expression="&quot;Oprima una letra para lanzar los dados&quot;" newline="True"/>
+                <input variable="A"/>
+                <assign variable="Dado1" expression="Random(6)+1"/>
+                <assign variable="Dado2" expression="Random(6)+1"/>
+                <assign variable="toLan" expression="toLan+1"/>
+                <assign variable="sumDa" expression="sumDa+(Dado1 + Dado2)"/>
+                <output expression="&quot;Lanzamiento #&quot; &amp; toLan &amp; &quot;:    Dado 1: &quot; &amp; Dado1 &amp; &quot;          Dado2: &quot; &amp; Dado2" newline="True"/>
+                <if expression="Dado1==Dado2">
+                    <then>
+                        <assign variable="numPar" expression="numPar+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="Dado1!=Dado2">
+                    <then>
+                        <assign variable="numImpar" expression="numImpar+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;Desea volver a lanzar los dados&quot;" newline="True"/>
+                <output expression="&quot;Oprima 'S'(si)&quot;" newline="True"/>
+                <input variable="lanDa"/>
+            </while>
+            <output expression="&quot;reporte final de resultados&quot;" newline="True"/>
+            <output expression="&quot;Total de tiros efectuados: &quot;&amp; toLan" newline="True"/>
+            <output expression="&quot;suma total de los tiros efectuados: &quot;&amp; sumDa" newline="True"/>
+            <output expression="&quot;total de pares generados: &quot;&amp; numPar" newline="True"/>
+            <output expression="&quot;total de impares generados: &quot;&amp; numImpar" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
