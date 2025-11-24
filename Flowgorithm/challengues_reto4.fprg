@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="challengues_reto4"/>
+        <attribute name="authors" value="Andres"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 11:25:21 a.&#160;m."/>
+        <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzEwOjE5OjU0IGEuwqBtLjszMjU3"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzEwOjUyOjUyIGEuwqBtLjsxO05JS087REVTS1RPUC1KRDBQOU5NOzIwMjUtMTEtMjM7MTE6MjU6MjIgUE07Y2hhbGxlbmd1ZXNfcmV0bzMuZnByZzs4MzQ5"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzExOjI1OjIxIGEuwqBtLjsyOzMzNTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numLa" type="Integer" array="False" size=""/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="parde6" type="Boolean" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <assign variable="numLa" expression="0"/>
+            <assign variable="parde6" expression="false"/>
+            <while expression="parde6=false">
+                <output expression="&quot;presione una letra para lanzar los dados&quot;" newline="True"/>
+                <input variable="A"/>
+                <assign variable="numLa" expression="numLa+1"/>
+                <assign variable="dado1" expression="Random(6)+1"/>
+                <assign variable="dado2" expression="Random(6)+1"/>
+                <output expression="&quot;lanzamiento #&quot;&amp;numLa" newline="True"/>
+                <output expression="&quot; dado1:&quot; &amp; dado1" newline="True"/>
+                <output expression="&quot;dado2:&quot; &amp; dado2" newline="True"/>
+                <if expression="dado1=6 and dado2=6">
+                    <then>
+                        <output expression="&quot;FIN se ha obtenido un PAR de SEIS&quot;" newline="True"/>
+                        <assign variable="parde6" expression="true"/>
+                    </then>
+                    <else/>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
