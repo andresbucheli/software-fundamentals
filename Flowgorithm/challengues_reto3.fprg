@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="RETO2"/>
+        <attribute name="authors" value="NIKO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-24 10:13:08 a.&#160;m."/>
+        <attribute name="created" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMToyNToyMiBQTTsyNjQz"/>
+        <attribute name="edited" value="TklLTztERVNLVE9QLUpEMFA5Tk07MjAyNS0xMS0yMzsxMTozNTo0MyBQTTsxOzI3NTU="/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzA5OjUzOjE4IGEuwqBtLjsxO05JS087REVTS1RPUC1KRDBQOU5NOzIwMjUtMTEtMjM7MTE6MjU6MjIgUE07Y2hhbGxlbmd1ZXNfcmV0bzIuZnByZzs4MzU5"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTI0OzEwOjEzOjA4IGEuwqBtLjszOzMzNjA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="numLa" type="Integer" array="False" size=""/>
+            <declare name="laRes" type="Integer" array="False" size=""/>
+            <declare name="dado" type="Integer" array="False" size=""/>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="dado3" type="Integer" array="False" size=""/>
+            <declare name="dado4" type="Integer" array="False" size=""/>
+            <declare name="dado5" type="Integer" array="False" size=""/>
+            <declare name="dado6" type="Integer" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <output expression="&quot;Cuantas veces deseas lanzar el dado?&quot;" newline="True"/>
+            <input variable="numLa"/>
+            <assign variable="laRes" expression="numLa"/>
+            <assign variable="dado1" expression="0"/>
+            <assign variable="dado2" expression="0"/>
+            <assign variable="dado3" expression="0"/>
+            <assign variable="dado4" expression="0"/>
+            <assign variable="dado5" expression="0"/>
+            <assign variable="dado6" expression="0"/>
+            <while expression="laRes&gt;0">
+                <output expression="&quot;presione una letra para lanzar dato&quot;" newline="True"/>
+                <input variable="A"/>
+                <assign variable="dado" expression="Random(6)+1"/>
+                <if expression="dado=1">
+                    <then>
+                        <assign variable="dado1" expression="dado1+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado=2">
+                    <then>
+                        <assign variable="dado2" expression="dado2+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado=3">
+                    <then>
+                        <assign variable="dado3" expression="dado3+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado=4">
+                    <then>
+                        <assign variable="dado4" expression="dado4+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado=5">
+                    <then>
+                        <assign variable="dado5" expression="dado5+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="dado=6">
+                    <then>
+                        <assign variable="dado6" expression="dado6+1"/>
+                    </then>
+                    <else/>
+                </if>
+                <output expression="&quot;dado: &quot;&amp; dado" newline="True"/>
+                <assign variable="laRes" expression="laRes-1"/>
+            </while>
+            <output expression="&quot;total de veces que salio el numero1: &quot; &amp; dado1" newline="True"/>
+            <output expression="&quot;total de veces que salio el numero2: &quot; &amp; dado2" newline="True"/>
+            <output expression="&quot;total de veces que salio el numero3: &quot; &amp; dado3" newline="True"/>
+            <output expression="&quot;total de veces que salio el numero4: &quot; &amp; dado4" newline="True"/>
+            <output expression="&quot;total de veces que salio el numero5: &quot; &amp; dado5" newline="True"/>
+            <output expression="&quot;total de veces que salio el numero6: &quot; &amp; dado6" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
