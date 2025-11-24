@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional2"/>
+        <attribute name="authors" value="Andres"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 11:07:17 p.&#160;m."/>
+        <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTE5OzEwOjMzOjQ1IHAuwqBtLjszMjcy"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTE5OzExOjA3OjE3IHAuwqBtLjsxOzMzODE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Numero" type="Integer" array="False" size=""/>
+            <declare name="Res" type="String" array="False" size=""/>
+            <assign variable="Numero" expression="0"/>
+            <output expression="&quot;Introduzca el valor del n&#250;mero: &quot;" newline="True"/>
+            <input variable="Numero"/>
+            <if expression="abs(Numero) % 2 ==0">
+                <then>
+                    <assign variable="Res" expression="&quot;Par&quot;"/>
+                    <output expression="&quot;El Numero es: &quot;&amp; Res" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="Res" expression="&quot;Impar&quot;"/>
+                    <output expression="&quot;El Numero es: &quot;&amp; Res" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
