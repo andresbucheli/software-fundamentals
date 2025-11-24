@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Reto_condicional_1"/>
+        <attribute name="authors" value="Andres"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-19 10:25:35 p.&#160;m."/>
+        <attribute name="created" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTE5OzA2OjMxOjIwIHAuwqBtLjszMjY4"/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTE5OzEwOjI1OjM1IHAuwqBtLjsxOzMzODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="dado1" type="Integer" array="False" size=""/>
+            <declare name="dado2" type="Integer" array="False" size=""/>
+            <declare name="A" type="String" array="False" size=""/>
+            <declare name="Res" type="String" array="False" size=""/>
+            <assign variable="dado1" expression="Random(6) + 1"/>
+            <assign variable="dado2" expression="Random(6) + 1"/>
+            <output expression="&quot;Presione letra para lanzar dados &quot;" newline="True"/>
+            <input variable="A"/>
+            <if expression="Dado1 % 2 ==0">
+                <then>
+                    <assign variable="res" expression="&quot;Par&quot;"/>
+                    <output expression="&quot;Dado1: &quot;&amp; dado1" newline="True"/>
+                    <output expression="&quot;El dado1 es: &quot;&amp; res" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="res" expression="&quot;impar&quot;"/>
+                    <output expression="&quot;El dado1 es: &quot;&amp; dado1" newline="True"/>
+                    <output expression="&quot;El dado1 es: &quot;&amp; res" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado2 % 2 == 0">
+                <then>
+                    <assign variable="res" expression="&quot;par&quot;"/>
+                    <output expression="&quot;Dado2: &quot;&amp; dado2" newline="True"/>
+                    <output expression="&quot;El dado2 es: &quot;&amp; res" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="res" expression="&quot;impar&quot;"/>
+                    <output expression="&quot;El dado2 es: &quot;&amp; dado2" newline="True"/>
+                    <output expression="&quot;El dado1 es: &quot;&amp; res" newline="True"/>
+                </else>
+            </if>
+            <if expression="dado1 == dado2">
+                <then>
+                    <output expression="&quot;YOU WIN&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;GAME OVER&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
