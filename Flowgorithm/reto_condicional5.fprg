@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="reto_condicional_5"/>
+        <attribute name="authors" value="claudia"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-21 11:19:46 p.&#160;m."/>
+        <attribute name="created" value="Y2xhdWRpYTtERVNLVE9QLU45SlMzOE87MjAyNS0xMS0xNTswOTozNTowOSBwLiBtLjszMjU5"/>
+        <attribute name="edited" value="Y2xhdWRpYTtERVNLVE9QLU45SlMzOE87MjAyNS0xMS0xNjswOToyMDowOSBhLiBtLjszOzMzNDk="/>
+        <attribute name="edited" value="QW5kcmVzO0RFU0tUT1AtOElCNE1TUDsyMDI1LTExLTIxOzExOjE5OjQ2IHAuwqBtLjsyOzMzODA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tiDo" type="String" array="False" size=""/>
+            <declare name="num" type="String" array="False" size=""/>
+            <declare name="Nom" type="String" array="False" size=""/>
+            <declare name="Ape" type="String" array="False" size=""/>
+            <declare name="gen" type="String" array="False" size=""/>
+            <declare name="a&#241;oNa" type="Integer" array="False" size=""/>
+            <declare name="Dir" type="String" array="False" size=""/>
+            <declare name="tel" type="String" array="False" size=""/>
+            <declare name="sala" type="Real" array="False" size=""/>
+            <declare name="nueSala" type="Real" array="False" size=""/>
+            <declare name="inc" type="Real" array="False" size=""/>
+            <output expression="&quot;Introduzca el tipo de documento (CC, PS, CE, CI)&quot;" newline="True"/>
+            <input variable="tiDo"/>
+            <output expression="&quot;Introduzca el numero de identificaci&#243;n&quot;" newline="True"/>
+            <input variable="num"/>
+            <output expression="&quot;Ingrese los nombres&quot;" newline="True"/>
+            <input variable="Nom"/>
+            <output expression="&quot;Ingrese los apellidos&quot;" newline="True"/>
+            <input variable="Ape"/>
+            <output expression="&quot;Ingrese genero&quot;" newline="True"/>
+            <input variable="gen"/>
+            <output expression="&quot;Ingrese a&#241;o de nacimiento&quot;" newline="True"/>
+            <input variable="a&#241;oNa"/>
+            <output expression="&quot;Ingrese dirrecion&quot;" newline="True"/>
+            <input variable="Dir"/>
+            <output expression="&quot;Ingrese numero de telefono&quot;" newline="True"/>
+            <input variable="tel"/>
+            <output expression="&quot;Ingrese valor del salario&quot;" newline="True"/>
+            <input variable="sala"/>
+            <if expression="sala&gt;=2000000">
+                <then>
+                    <if expression="gen=&quot;femenino&quot;">
+                        <then>
+                            <assign variable="inc" expression="(sala*3)/100"/>
+                            <assign variable="nueSala" expression="sala+inc"/>
+                            <output expression="&quot;El salario final de  &quot; &amp; nom &amp;&quot;  &quot; &amp; ape &amp;&quot;  es &quot; &amp; nueSala" newline="True"/>
+                        </then>
+                        <else>
+                            <assign variable="inc" expression="(sala*2.5)/100"/>
+                            <assign variable="nueSala" expression="sala+inc"/>
+                            <output expression="&quot;El salario final de  &quot; &amp; nom &amp;&quot;  &quot; &amp; ape &amp;&quot;  es &quot; &amp; nueSala" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="sala&gt;1200000 || sala&gt; 2000000">
+                        <then>
+                            <assign variable="inc" expression="(sala*5)/100"/>
+                            <assign variable="nueSala" expression="sala+inc"/>
+                            <output expression="&quot;El salario final de  &quot; &amp; nom &amp;&quot;  &quot; &amp; ape &amp;&quot;  es &quot; &amp; nueSala" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="gen = &quot;femenino&quot;">
+                                <then>
+                                    <assign variable="inc" expression="(sala*10)/100"/>
+                                    <assign variable="nueSala" expression="sala+inc"/>
+                                    <output expression="&quot;El salario final de  &quot; &amp; nom &amp;&quot;  &quot; &amp; ape &amp;&quot;  es &quot; &amp; nueSala" newline="True"/>
+                                </then>
+                                <else>
+                                    <assign variable="inc" expression="(sala*8)/100"/>
+                                    <assign variable="nueSala" expression="sala+inc"/>
+                                    <output expression="&quot;El salario final de  &quot; &amp; nom &amp;&quot;  &quot; &amp; ape &amp;&quot;  es &quot; &amp; nueSala" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
